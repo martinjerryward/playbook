@@ -1,13 +1,13 @@
 ---
-- name: Install i3 Window Manager
-  hosts: localhost
-  become: yes
+- name: Install i3 window manager
+  hosts: localhost  # Assuming you're installing on the local machine
+  become: yes  # Run tasks with elevated privileges (sudo)
   tasks:
     - name: Update apt cache
       apt:
         update_cache: yes
 
-    - name: Install i3
+    - name: Install i3 window manager
       apt:
-        name: i3
-        state: present
+        name: i3  # Package name for i3 window manager
+        state: present  # Ensure the package is installed
