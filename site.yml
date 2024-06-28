@@ -1,13 +1,13 @@
 ---
-- hosts: localhost
+- name: Install i3 Window Manager
+  hosts: localhost
   become: yes
-
   tasks:
     - name: Update apt cache
       apt:
         update_cache: yes
 
-    - name: Install i3 window manager
+    - name: Install i3
       apt:
         name: i3
         state: present
